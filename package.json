@@ -1,0 +1,33 @@
+{
+  "name": "busboy-firebase",
+  "version": "1.0.0",
+  "description": "Firebase Functions Express middleware with adapted Busboy middleware to files uploaded ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "npm test",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandoprudentedeMatos/busboy-firebase.git"
+  },
+  "keywords": [
+    "firebase",
+    "functions",
+    "upload",
+    "files",
+    "middleware",
+    "express"
+  ],
+  "author": "Fernando P. Matos <fernando.prudente.dematos@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandoprudentedeMatos/busboy-firebase/issues"
+  },
+  "homepage": "https://github.com/fernandoprudentedeMatos/busboy-firebase#readme",
+  "devDependencies": {
+    "@types/node": "^12.7.1",
+    "typescript": "^3.5.3"
+  }
+}
