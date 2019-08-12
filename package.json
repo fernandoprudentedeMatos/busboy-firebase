@@ -1,6 +1,6 @@
 {
   "name": "busboy-firebase",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Firebase Functions Express middleware with adapted Busboy middleware to files uploaded ",
   "main": "index.js",  
   "scripts": {
