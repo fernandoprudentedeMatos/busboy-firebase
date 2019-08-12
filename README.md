@@ -14,7 +14,7 @@
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
 import * as express from 'express'
-import fileUploadMiddleware from './middlewares/fileupload.middleware'
+import * as fileUploadMiddleware from 'busboy-firebase'
 
 admin.initializeApp({
   ...
@@ -24,7 +24,7 @@ admin.initializeApp({
 
 const app = express();
 
-app.post('/uploadfile', bfmiddleware, (req: any, res: any) => {
+app.post('/uploadfile', fileUploadMiddleware, (req: any, res: any) => {
    // req.files[0]     <- here all files
    const fileOne = req.files[0];      
    const fileOne = req.files[0];   
