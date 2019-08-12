@@ -1,11 +1,9 @@
 {
   "name": "busboy-firebase",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Firebase Functions Express middleware with adapted Busboy middleware to files uploaded ",
-  "main": "index.js",  
-  "scripts": {
-
-  },
+  "main": "index.js",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fernandoprudentedeMatos/busboy-firebase.git"
