@@ -1,9 +1,9 @@
 const Busboy = require('busboy');
-import * as fs from 'fs'
-import * as path from 'path'
-import * as os from 'os'
+const fs = require('fs')
+const path = require('path')
+const os = require('os')
 
-export default (req: any, res: Response, next: any) => {
+module.exports = (req, res, next) => {
     // See https://cloud.google.com/functions/docs/writing/http#multipart_data
     const busboy = new Busboy({
       headers: req.headers,
@@ -13,20 +13,20 @@ export default (req: any, res: Response, next: any) => {
       }
     });
   
-    const fields: any = {};
-    const files: any[] = [];
-    const fileWrites: any[] = [];
+    const fields = {};
+    const files = [];
+    const fileWrites = [];
     // Note: os.tmpdir() points to an in-memory file system on GCF
     // Thus, any files in it must fit in the instance's memory.
     const tmpdir = os.tmpdir();
   
-    busboy.on('field', (key: any, value: any) => {
+    busboy.on('field', (key, value) => {
       // You could do additional deserialization logic here, values will just be
       // strings
       fields[key] = value;
     });
   
-    busboy.on('file', (fieldname: any, file: any, filename: any, encoding: any, mimetype: any) => {
+    busboy.on('file', (fieldname, file, filename, encoding, mimetype) => {
       const filepath = path.join(tmpdir, filename);
       console.log(`Handling file upload field ${fieldname}: ${filename} (${filepath})`);
       const writeStream = fs.createWriteStream(filepath);
@@ -76,3 +76,4 @@ export default (req: any, res: Response, next: any) => {
   
     busboy.end(req.rawBody);
   }
+  

@@ -1,12 +1,10 @@
 {
   "name": "busboy-firebase",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "Firebase Functions Express middleware with adapted Busboy middleware to files uploaded ",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",  
   "scripts": {
-    "test": "npm test",
-    "build": "tsc"
+
   },
   "repository": {
     "type": "git",
@@ -25,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/fernandoprudentedeMatos/busboy-firebase/issues"
   },
-  "homepage": "https://github.com/fernandoprudentedeMatos/busboy-firebase#readme",
-  "devDependencies": {
-    "@types/node": "^12.7.1",
-    "typescript": "^3.5.3"
-  }
+  "homepage": "https://github.com/fernandoprudentedeMatos/busboy-firebase#readme"
 }
